@@ -21,11 +21,18 @@ jobs:
 
     - name: Install app dependencies
       run: npm install
+           npm install -g @ionic/cli
+           npm install -g ios-deploy
+           npm install -g ios-sim
+           npm install -g @angular/cli
 
     - name: Pod Install      
       run: sudo gem uninstall cocoapods -ax
            sudo gem install cocoapods
            pod setup
+    
+    - name: Cap sync      
+      run: ionic cap sync ios         
 
     - name: Build project app
       run: npm run build
