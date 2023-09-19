@@ -46,4 +46,9 @@ jobs:
     - name: Build project
       run: xcodebuild -workspace './ios/App/App.xcworkspace' -scheme App -destination generic/platform=iOS -archivePath App.xcarchive archive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
       
-   
+    - name: Upload release bundle
+      uses: actions/upload-artifact@v3
+      with:
+        name: app-ios
+        path: output/
+        retention-days: 60
