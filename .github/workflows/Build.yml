@@ -23,7 +23,9 @@ jobs:
       run: npm install
 
     - name: Pod Install      
-      run: pod init && pod install
+      run: sudo gem uninstall cocoapods -ax
+           sudo gem install cocoapods
+           pod setup
 
     - name: Build project app
       run: npm run build
