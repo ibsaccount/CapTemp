@@ -21,7 +21,7 @@ jobs:
 
     - name: Install app dependencies
       run: npm install
-           npm install -g @ionic/cli
+           npm install @ionic/cli
         
 
     - name: Pod Install      
