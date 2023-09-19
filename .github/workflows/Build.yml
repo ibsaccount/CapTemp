@@ -50,5 +50,5 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: app-ios
-        path: output/
+        path: ${{ runner.temp }}/build       
         retention-days: 60
