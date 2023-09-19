@@ -32,11 +32,16 @@ jobs:
     - name: Pod Install      
       run: npm uninstall cocoapods -ax
            npm install cocoapods
-           pod setup   
-           
+           pod setup             
 
     - name: Build project app
       run: npm run build
+
+    - name: Capacitor update
+      run: npx cap update
+
+    - name: Capacitor copy
+      run: npx cap copy
 
     - name: Build project
       run: xcodebuild -workspace './ios/App/App.xcworkspace' -scheme App -destination generic/platform=iOS -archivePath App.xcarchive archive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
