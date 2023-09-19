@@ -32,10 +32,8 @@ jobs:
     - name: Pod Install      
       run: npm uninstall cocoapods -ax
            npm install cocoapods
-           pod setup
-    
-    - name: Cap sync      
-      run: ionic cap sync ios         
+           pod setup   
+           
 
     - name: Build project app
       run: npm run build
