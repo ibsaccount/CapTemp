@@ -27,10 +27,7 @@ jobs:
            npm install @angular/cli
 
     - name: Install Ionic 
-      run: npm install ionic
-           
-    - name: Capacitor include 
-      run: ionic integrations enable capacitor       
+      run: npm install ionic   
 
     - name: Pod Install      
       run: npm uninstall cocoapods -ax
