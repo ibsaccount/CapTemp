@@ -25,6 +25,9 @@ jobs:
            npm install ios-deploy
            npm install ios-sim
            npm install @angular/cli
+
+    - name: Install Ionic 
+      run: npm install ionic
            
     - name: Capacitor include 
       run: ionic integrations enable capacitor       
