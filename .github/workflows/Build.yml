@@ -44,7 +44,7 @@ jobs:
       run: npx cap copy
 
     - name: Build project
-      run: xcodebuild -workspace './ios/App/App.xcworkspace' -scheme App -destination generic/platform=iOS -archivePath App.xcarchive archive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -exportPath App.ipa
+      run: xcodebuild -workspace './ios/App/App.xcworkspace' -scheme App -destination generic/platform=iOS -archivePath App.xcarchive archive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
       
     - name: Upload release bundle
       uses: actions/upload-artifact@v3
