@@ -17,15 +17,17 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: 19.x
-
+        node-version: 19.x       
+      
     - name: Install app dependencies
       run: npm install
            npm install @ionic/cli
            npm install ios-deploy
            npm install ios-sim
            npm install @angular/cli
-        
+           
+    - name: Capacitor include 
+      run: ionic integrations enable capacitor       
 
     - name: Pod Install      
       run: npm uninstall cocoapods -ax
